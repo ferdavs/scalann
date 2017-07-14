@@ -19,7 +19,7 @@ object BaseCase extends App {
   val y = 3.0
 
   //Strategy #1: Random Local Search
-  def localRandomSearch(xy: (Double, Double), f: (Double, Double) => Double) = {
+  def localRandomSearch(xy: (Double, Double), f: (Double, Double) => Double): (Double, Double) = {
     Console println "<<<<<<<< Local Random Search >>>>>>>>>"
 
     val (x, y) = xy
@@ -47,7 +47,7 @@ object BaseCase extends App {
   localRandomSearch((x, y), f)
 
   //Stategy #2: Numerical Gradient
-  def numericGradient(xy: (Double, Double), f: (Double, Double) => Double) = {
+  def numericGradient(xy: (Double, Double), f: (Double, Double) => Double): (Double, Double) = {
     Console println "<<<<<<<< Numerical Gradient >>>>>>>>>"
     val (x, y) = xy
 
@@ -81,7 +81,7 @@ object BaseCase extends App {
   //  })
 
   //Strategy #3: Analytic Gradient
-  def analyticGradient(xy: (Double, Double), f: (Double, Double) => Double) = {
+  def analyticGradient(xy: (Double, Double), f: (Double, Double) => Double): (Double, Double) = {
     Console println "<<<<<<<< Analytic Gradient >>>>>>>>>"
     val (x, y) = xy
     val step = 0.01
